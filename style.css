@@ -9,27 +9,28 @@
 
 body { 
     height: 100%;
-    background: rgb(173, 216, 230);
+    /*background: rgb(173, 216, 230);*/
+    background: dimgray ;
 }
 
 .container {
     background:#fff;
     width: 400px;
-    padding: 50px;
+    padding: 40px;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    box-shadow: 15px 30px 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 15px 30px 35px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     -webkit-perspective: 300px;
     perspective: 300px;
 }
 
-.stats{
-    text-align: right;
-    color: #101020;
-    font-weight: 700;
+.texto{
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
     line-height: 25px;
 }
 
@@ -47,6 +48,7 @@ body {
 }
 
 .buttons{
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -64,12 +66,28 @@ body {
 }    
 
 button{
-    width: 120px;
+    width: 145px;
     padding: 10px;
-    border: 2.5px solid rgb(173, 216, 230);
+    border: 2.5px solid grey;
     border-radius: 5px;
     cursor: pointer;
     background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px; /* Space between text and image */
+    font-weight: bold;
+    box-shadow: 5px 10px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
+}
+
+button img {
+    width: 2.2rem; /* Adjust the size as needed */
+    height: 2.2rem; /* Adjust the size as needed */
+}
+
+button:hover {
+    background-color: rgb(224, 224, 224);
 }
 
 #flip-button:disabled{
